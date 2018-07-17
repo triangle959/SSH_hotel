@@ -1,0 +1,153 @@
+#registerWrap{
+    height: 600px;
+}
+.red-bg-wrp{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color:#d30140 ;
+    background-image: url(img/login_red_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.login-con-wrp{
+    width: 300px;
+    margin-top: 82px;
+}
+.login-wrp{
+    width: 300px;
+    padding-left: 55px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color:#fff;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius:5px 5px 0 0 ;
+    position: relative;
+}
+#errorPrompt{
+    color: #ed9347;
+    font-size: 12px;
+    position: absolute;
+    left: 57px;
+    top:20px;
+    display: none;
+}
+.saw-bg{
+    width:300px;
+    height: 11px;
+    overflow: hidden;
+    background: transparent;
+    background-image: url(img/sawtooth_bd.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.ipt-con{
+    width: 100%;
+    height: 35px;
+    line-height: 33px;
+    margin-top: 16px;
+}
+.prompt-lab{
+    width: 200px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+}
+.suggest-tip{
+    height: 35px;
+    line-height: 35px;
+    color: #c9cdf1;
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+    left: 17px;
+    top: 0;
+}
+#account, #password,#loginSubmit{
+	width: 200px;
+	height: 40px;
+	background: #fff;
+	padding-left: 15px;
+	border: 1px solid #c9cce7;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+#loginSubmit{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left:0;
+    border-color: #6a71b0;
+    background: #6a71b0;
+    cursor: pointer;
+}
+#loginSubmit:hover{
+    background: #3d49b0;
+}
+.auto-login{
+    height: 40px;
+}
+#autoLogin{
+    height: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #686ea4;
+    padding-left: 15px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+#autoSelect, #autoLogin:after{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #686ea4;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius:2px;
+    position: absolute;
+    left: 0;
+    top: 13px;
+}
+#autoLogin:after{
+    content: ' ';
+    width: 10px;
+    height: 5px;
+    display: inline-block;
+    background: transparent;
+    border: 1px solid #fff;
+    border-top: none;
+    border-right: none;
+    -moz-border-radius: 0;
+    -webkit-border-radius:0;
+    border-radius:0;
+    left: 3px;
+    top: 16px;
+    -webkit-transform:rotate(-45deg) ;
+    -ms-transform:rotate(-45deg)  ;
+    -o-transform: rotate(-45deg) ;
+    -moz-transform:rotate(-45deg)  ;
+    transform: rotate(-45deg) ;
+}
+#remenber{
+    vertical-align: middle;
+    visibility: hidden;
+}
+.link-dev-line{
+    margin-top: 0;
+    background: url(img/login_left_line.png) no-repeat 63px center;
+}
+.foget-pwd, .go-regist{
+    color: #686ea4;
+    font-size: 12px;
+}
+.go-regist{
+    color: #8287bb;
+    margin-left: 20px;
+}
+.link-dev-line > a:hover{
+    text-decoration: underline;
+}

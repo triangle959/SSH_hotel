@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<!-- 将struct2委托给spring进行管理 -->
+	<constant name="structs.objectFactory" value="spring"></constant>
+		
+	<!-- 开发者模式 -->
+	<constant name="structs.devMode" value="true"></constant>
+	
+	
+	<package name="default" namespace="/" extends="struts-default">
+		
+		<!-- 定义userManager-->
+    	<action name="userAction" class="userAction">
+    		<!-- 前台用户登录成功的映射页面 -->
+    		<result name="loginSucc">./index.jsp</result>
+    		<!-- 前台用户登录失败的映射页面 -->
+    		<result name="loginError">./loginError.jsp</result>
+    		<!-- 前台用户注册成功的映射页面 -->
+    		<result name="registerSucc">./index.jsp</result>
+    		<!-- 前台用户注册失败 -->
+    		<result name="registerFail">./register.jsp</result>
+    		<!-- 前台用户退出 -->
+    		<result name="loginOut">./index.jsp</result>
+    	</action>
+    	<!-- 定义roomAction -->
+    	<action name="roomAction" class="roomAction">
+    		<!-- 后台查看房间表 -->
+    		<result name="roomlist">/back/jsp/room/readAllroom.jsp</result>
+			<!-- 后台修改房间信息 -->
+			<result name="modifyroom">/back/jsp/room/modifyRoom.jsp</result>
+    	</action>
+    	<!-- 定义roomtypeAction -->
+    	<action name="roomtypeAction" class="roomtypeAction">
+    		<!-- 前台查询房间类型 -->
+    		<result name="listRoomtype">./roomdetail.jsp</result>
+    		<!-- 后台查看房间类型表 -->
+			<result name="roomtypelist">/back/jsp/room/readAllroomtype.jsp</result>
+    		<!-- 后台修改房间类型 -->
+    		<result name="modifyroomtype">/back/jsp/room/modifyRoomtype.jsp</result>
+    	</action>
+    	<!-- 定义orderAction -->
+    	<action name="orderAction" class="orderAction">
+    		<!-- 前台预订成功 -->
+    		<result name="orderSucc">./orderdetail.jsp</result>
+    		<!-- 前台查看订单 -->
+    		<result name="readOrder">./orderdetail.jsp</result>
+    		<!-- 后台查看所有订单 -->
+    		<result name="readAllorders">/back/jsp/order/readAllorder.jsp</result>
+    		<!-- 后台查看未完成订单 -->
+    		<result name="readUnfinish">/back/jsp/order/readUnfinish.jsp</result>
+    		<!-- 办理入住 -->
+    		<result name="checkin">/back/jsp/order/checkin.jsp</result>
+    		<!-- 办理离店 -->
+    		<result name="checkout">/back/jsp/order/checkout.jsp</result>
+    		
+    	</action>
+    	
+	
+	</package>
+</struts>    
